@@ -87,7 +87,7 @@ campusplay/
 **1. Clone the repository**
 ```bash
 git clone https://github.com/Shauryagupta4/campusplay_backend.git
-cd campusplay
+cd campusplay_backend
 ```
 
 **2. Install dependencies**
