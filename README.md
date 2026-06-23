@@ -86,7 +86,7 @@ campusplay/
 
 **1. Clone the repository**
 ```bash
-git clone https://github.com/yourusername/campusplay.git
+git clone https://github.com/Shauryagupta4/campusplay_backend.git
 cd campusplay
 ```
 
@@ -142,19 +142,6 @@ sqlalchemy
 
 ---
 
-## Screenshots
-
-> Add screenshots of your Streamlit app here
-
----
-
-## Author
-
-Built by [Your Name] — 2nd Year AIML Student
-Part of PostgreSQL learning journey from SQLite to cloud-hosted production database.
-
----
-
 ## What I Learned
 
 - Designing multi-table relational databases from scratch
@@ -164,3 +151,10 @@ Part of PostgreSQL learning journey from SQLite to cloud-hosted production datab
 - Building interactive dashboards with Streamlit and Plotly
 - Deploying PostgreSQL to cloud using Supabase
 - Production practices — environment variables, error handling, rollback
+
+---
+
+## Author
+
+Built by ***SHAURYA GUPTA*** — 2nd Year AIML Student
+Part of PostgreSQL learning journey from SQLite to cloud-hosted production database.
