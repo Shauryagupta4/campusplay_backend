@@ -3,24 +3,24 @@ from dotenv import load_dotenv
 import os
 from sqlalchemy import create_engine
 from urllib.parse import quote_plus
-
+import streamlit as st
 load_dotenv()
 
 def get_connection():
     conn=psycopg2.connect(
-        host=os.environ.getenv("DB_HOST"),
-        port=os.environ.getenv("DB_PORT"),
-        dbname=os.environ.getenv("DB_NAME"),
-        user=os.environ.getenv("DB_USER"),
-        password=os.environ.getenv("DB_PASSWORD")
+        host=os.environ.get("DB_HOST"),
+        port=os.environ.get("DB_PORT"),
+        dbname=os.environ.get("DB_NAME"),
+        user=os.environ.get("DB_USER"),
+        password=os.environ.get("DB_PASSWORD")
     )
     return conn
 
-
+@st.cache_resource
 def get_engine():
-    password = quote_plus(os.environ.getenv('DB_PASSWORD'))
+    password = quote_plus(os.environ.get('DB_PASSWORD'))
     return create_engine(
-        f"postgresql://{os.environ.getenv('DB_USER')}:{password}@{os.environ.getenv('DB_HOST')}:{os.environ.getenv('DB_PORT')}/{os.environ.getenv('DB_NAME')}"
+        f"postgresql://{os.environ.get('DB_USER')}:{password}@{os.environ.get('DB_HOST')}:{os.environ.get('DB_PORT')}/{os.environ.get('DB_NAME')}"
     )
 
 
