@@ -76,8 +76,9 @@ campusplay/
 │   ├── videos.py           # video CRUD operations
 │   ├── ratings.py          # ratings management
 │   └── analytics.py        # dashboard analytics queries
-└── frontend/
-    └── app.py              # Streamlit web application
+|── frontend/
+|    └── app.py             # Streamlit web application
+└── Screenshots/            # Screenshots of working web app
 ```
 
 ---
@@ -99,18 +100,22 @@ pip install -r requirements.txt
 
 Create a `.env` file in the project root:
 ```
-DB_HOST=your_supabase_host
-DB_PORT=5432
+DB_HOST=aws-0-ap-south-1.pooler.supabase.com
+DB_PORT=6543
 DB_NAME=postgres
-DB_USER=postgres
+DB_USER=postgres.your_project_id
 DB_PASSWORD=your_supabase_password
 ```
 
-Get these values from your Supabase project → Connect → Direct Connection.
+Get these values from your Supabase project → Connect → Transaction Pooler.
 
 **4. Run the app**
 ```bash
 streamlit run frontend/app.py
+```
+
+> Note: This project uses Supabase Transaction Pooler for better performance.
+> Direct connection (port 5432) may cause timeout issues on free tier.
 ```
 
 ---
